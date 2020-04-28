@@ -24,13 +24,17 @@ require_once("config.php");
 //$usuario->login("user", "12345");
 //echo $usuario;
 
-$aluno = new Usuario("aluno", "@lun0");
+
+//Criando um novo usuário
+//$aluno = new Usuario("aluno", "@lun0");
 //$aluno->setDeslogin('aluno');
 //$aluno->setDesenha('@lun0');
-$aluno->insert();
+//$aluno->insert();
+//echo $aluno;
 
-echo $aluno;
-
-
+$usuario = new Usuario();
+$usuario->loadById(6);
+$usuario->update("aluno", "@Lun0");
+echo $usuario;
 
 ?>
